@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/oooxhtml/oooxhtml.css"/>
+    <style type="text/css">@page {margin-top:2cm;margin-bottom:2cm;margin-left:2cm;margin-right:2cm;}</style>
+    <title>Разработка через тестирование</title>
+    <meta name="generator" content="oooxhtml/1.2"/>
+    <meta name="HeadURL" content="$HeadURL$"/>
+  </head>
+  <body>
+    <div class="container text">
+      <h1 id="razrabotka_cerez_testirovanie">
+        <a class="anchor" href="#razrabotka_cerez_testirovanie">Разработка через тестирование</a>
+      </h1>
+      <h2 id="kriterii_priemki">
+        <a class="anchor" href="#kriterii_priemki">Критерии приемки</a>
+      </h2>
+      <p>Основные применения разработка через тестирование (TDD)</p>
+      <ol>
+        <li>
+          <p>Повышения качества кода</p>
+        </li>
+        <li>
+          <p>Снижение времени на отладку и разбор ошибок (при «отказе теста» возможность откатиться на ревизию, в которой произошел сбой может быть эффективнее продолжительной отладки). </p>
+        </li>
+        <li>
+          <p>Исключение повторного внесения ошибок, «хождения по кругу»</p>
+        </li>
+        <li>
+          <p>Описание требований к системе - Разработка через приемочные тесты – acceptance test driven development (ATDD) является развитием идеи TDD. Общий смысл в том, что прежде чем что-то делать, надо придумать критерий выполненной работы и критерий того, что работа сделана правильно. Проектирование под конкретные условия использования упрощает проектирование программного обеспечения, позволяет избегать «переусложненных» архитектур.</p>
+        </li>
+      </ol>
+      <p>Пример альтернативных варианты описания требований с помощью задач и тестов из книги <a href="library.xhtml#Test_Driven:_Lasse_Koskela">Test Driven</a>. Основное отличие заключается в том, что тесты описывают конкретный «внешний» результат работы системы, который можно проверить автоматизированно. Тесты не показывают, как следует реализовать данное поведение, но служат «подсказкой» разработчику. </p>
+      <table summary="Таблица1" id="tablica1">
+        <colgroup>
+          <col style="min-width:85mm;"/>
+          <col style="min-width:85mm;"/>
+        </colgroup>
+        <tr>
+          <td>
+            <p style="font-size:12pt;font-weight:bold;">Подсистема почтовых шаблонов разложена в набор задач</p>
+          </td>
+          <td>
+            <p style="font-size:12pt;font-weight:bold;">Подсистема почтовых шаблонов разложена в набор тестов<br/></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="font-size:12pt;">Написать регулярное выражение для определения переменных<br/>из шаблона.</p>
+          </td>
+          <td>
+            <p style="font-size:12pt;">Шаблон без каких-либо переменных отображается как есть.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="font-size:12pt;">Реализовать анализатор шаблонов, который использует регулярные<br/>выражения.</p>
+          </td>
+          <td>
+            <p style="font-size:12pt;">Шаблон с одной переменной отображается с<br/>переменная замененной на ее значение.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="font-size:12pt;">Реализовать движок шаблонизатора, который предоставляет <br/>API и использует синтаксический анализатор шаблонов внутри.</p>
+          </td>
+          <td>
+            <p style="font-size:12pt;">Шаблон с несколькими переменными отображается с<br/>соответствующими замененными значениями переменных.</p>
+          </td>
+        </tr>
+      </table>
+      <h2 id="avtomatizirovann_e_kriterii_priemki">
+        <a class="anchor" href="#avtomatizirovann_e_kriterii_priemki">Автоматизированные критерии приемки</a>
+      </h2>
+      <p>Для реализации автоматизированных критерии приемки, например финансовых расчетов, как правило пишутся «движки», загружающие контрольные данные из табличных файлов. Возможна так же независимая реализация расчета контрольных значений на одном из языков программирования, например Python.</p>
+    </div>
+    <script type="text/javascript" src="/privilegedAPI/web/scripts/privilegedAPI.js"></script>
+    <script type="text/javascript" src="/oooxhtml/oooxhtml.js"></script>
+  </body>
+</html>

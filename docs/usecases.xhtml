@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/oooxhtml/oooxhtml.css"/>
+    <style type="text/css">@page {margin-top:2cm;margin-bottom:2cm;margin-left:2cm;margin-right:2cm;}</style>
+    <title>Варианты использования</title>
+    <meta name="generator" content="oooxhtml/1.2"/>
+    <meta name="HeadURL" content="$HeadURL$"/>
+  </head>
+  <body>
+    <div class="container text">
+      <h1 id="diagramm__precedentov">
+        <a class="anchor" href="#diagramm__precedentov">Варианты использования</a>
+      </h1>
+      <p>Задача: определить как пользователи(сервисы) будут взаимодействовать, составить и описать перечень прецедентов системы.</p>
+      <p>Базовые требования дают очень общее представление о том, что система должна делать и чего нет. Этого описания не достаточно для ее реализации. Чтобы представить весь функционал системы в деталях необходимо подробно описать все прецеденты ее использования конечными пользователями.</p>
+      <h2 id="element__diagramm_">
+        <a class="anchor" href="#element__diagramm_">Элементы диаграммы</a>
+      </h2>
+      <h3 id="dejstvuysee_lico">
+        <a class="anchor" href="#dejstvuysee_lico">Действующее лицо</a>
+      </h3>
+      <p>Действующее лицо - это кто-то или что-то вне системы и влияющий на систему или находящийся под её влиянием. Действующее лицо может быть человеком, устройством, другой системой или подсистемой, или временем. Человек в реальном мире может быть представлен несколькими действующими лицами, если у них есть несколько различных ролей и целей по отношению к системе. Они взаимодействуют с системой и производят над ней некоторые действия.</p>
+      <h3 id="precedent">
+        <a class="anchor" href="#precedent">Прецедент</a>
+      </h3>
+      <p>Прецедент - это описание поведения системы, когда она взаимодействует с кем-то (или чем-то) из внешней среды. Система может отвечать на внешние запросы <a href="#dejstvuysee_lico">действующего лица</a>, может сама выступать инициатором взаимодействия. </p>
+      <h3 id="svjz_">
+        <a class="anchor" href="#svjz_">Связь</a>
+      </h3>
+      <p>Прецеденты могут зависеть друг от друга. Для этого между ними создается связь. Связь может нескольких типов:</p>
+      <ol>
+        <li>
+          <p>Связь типа invoke означает, что во время исполнения одного прецедента обязателен или возможен вызов другого прецедента.</p>
+        </li>
+        <li>
+          <p>Связь типа precedes означает, что завершение одного прецедента является обязательным или достаточным условием для того, чтобы мог состояться другой прецедент.</p>
+        </li>
+        <li>
+          <p>Связь типа extend означает, что существуют различные вариации реализации прецедента.</p>
+        </li>
+      </ol>
+    </div>
+    <script type="text/javascript" src="/privilegedAPI/web/scripts/privilegedAPI.js"></script>
+    <script type="text/javascript" src="/oooxhtml/oooxhtml.js"></script>
+  </body>
+</html>
