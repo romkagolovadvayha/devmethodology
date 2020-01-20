@@ -1,82 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg-flat.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="/oooxhtml/oooxhtml.xsl"?><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="/oooxhtml/oooxhtml.css"/>
     <style type="text/css">@page {margin-top:2cm;margin-bottom:2cm;margin-left:2cm;margin-right:2cm;}</style>
     <title>Разработка через тестирование</title>
-    <meta name="generator" content="oooxhtml/1.2"/>
+    <meta name="generator" content="oooxhtml/1.4"/>
     <meta name="HeadURL" content="$HeadURL$"/>
   </head>
   <body>
     <div class="container text">
-      <h1 id="razrabotka_cerez_testirovanie">
-        <a class="anchor" href="#razrabotka_cerez_testirovanie">Разработка через тестирование</a>
+      <h1 id="Test_driven_design">
+        <a class="anchor" href="#Test_driven_design">Test driven design</a>
       </h1>
-      <h2 id="kriterii_priemki">
-        <a class="anchor" href="#kriterii_priemki">Критерии приемки</a>
+      <h2 id="Definition">
+        <a class="anchor" href="#Definition">Definition</a>
       </h2>
-      <p>Основные применения разработка через тестирование (TDD)</p>
+      <p>TDD it is a programming technique that helps us write thoroughly tested code and evolve our code with the best design possible at each stage. TDD simply helps us avoid the vicious circle of poorly written code. </p>
+      <p>The big picture from book "Test Driven" by Lasse Koskela:</p>
+      <blockquote>
+        <cite>“Only ever write code to fix a failing test.” That’s test-driven development, or TDD, in one sentence. First we write a test, then we write code to make the test pass. Then we find the best possible design for what we have, relying on the existing tests to keep us from breaking things while we’re at it. This approach to building software encourages good design, produces testable code, and keeps us away from over-engineering our systems because of flawed assumptions. And all of this is accomplished by the simple act of driving our design each step of the way with executable tests that move us toward the final implementation.</cite>
+      </blockquote>
+      <p>Using TDD, we encouraging good software desing. "Good" means "enough good at current moment", not over-engineered design to pass tests / acceptance criterias.</p>
+      <h2 id="Problems">
+        <a class="anchor" href="#Problems">Problems</a>
+      </h2>
+      <h3 id="Nightmare_to_maintain__slow_to_develop">
+        <a class="anchor" href="#Nightmare_to_maintain__slow_to_develop">Nightmare to maintain, slow to develop </a>
+      </h3>
+      <p>From book "Test Driven" by Lasse Koskela:</p>
+      <blockquote>
+        <cite>Well-written code exhibits good design and a balanced division of responsibilities without duplication—all the good stuff. Poorly written code doesn’t, and working with it is a nightmare in many aspects. One of them is that the code is difficult to understand and, thus, difficult to change. As if that wasn’t enough of a speed bump, changing problematic code tends to break functionality elsewhere in the system, and duplication wreaks havoc in the form of bugs that were supposed to be fixed already. The list goes on.</cite>
+      </blockquote>
+      <p>Quality of produced software remains huge problem. Poorly written code</p>
       <ol>
         <li>
-          <p>Повышения качества кода</p>
+          <p>Diffucult to understand</p>
         </li>
         <li>
-          <p>Снижение времени на отладку и разбор ошибок (при «отказе теста» возможность откатиться на ревизию, в которой произошел сбой может быть эффективнее продолжительной отладки). </p>
+          <p>Diffucult to change</p>
         </li>
         <li>
-          <p>Исключение повторного внесения ошибок, «хождения по кругу»</p>
-        </li>
-        <li>
-          <p>Описание требований к системе - Разработка через приемочные тесты – acceptance test driven development (ATDD) является развитием идеи TDD. Общий смысл в том, что прежде чем что-то делать, надо придумать критерий выполненной работы и критерий того, что работа сделана правильно. Проектирование под конкретные условия использования упрощает проектирование программного обеспечения, позволяет избегать «переусложненных» архитектур.</p>
+          <p>Changing problematic code breaks functionality elsewhere in the system</p>
         </li>
       </ol>
-      <p>Пример альтернативных варианты описания требований с помощью задач и тестов из книги <a href="library.xhtml#Test_Driven:_Lasse_Koskela">Test Driven</a>. Основное отличие заключается в том, что тесты описывают конкретный «внешний» результат работы системы, который можно проверить автоматизированно. Тесты не показывают, как следует реализовать данное поведение, но служат «подсказкой» разработчику. </p>
-      <table summary="Таблица1" id="tablica1">
-        <colgroup>
-          <col style="min-width:85mm;"/>
-          <col style="min-width:85mm;"/>
-        </colgroup>
-        <tr>
-          <td>
-            <p style="font-size:12pt;font-weight:bold;">Подсистема почтовых шаблонов разложена в набор задач</p>
-          </td>
-          <td>
-            <p style="font-size:12pt;font-weight:bold;">Подсистема почтовых шаблонов разложена в набор тестов<br/></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p style="font-size:12pt;">Написать регулярное выражение для определения переменных<br/>из шаблона.</p>
-          </td>
-          <td>
-            <p style="font-size:12pt;">Шаблон без каких-либо переменных отображается как есть.</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p style="font-size:12pt;">Реализовать анализатор шаблонов, который использует регулярные<br/>выражения.</p>
-          </td>
-          <td>
-            <p style="font-size:12pt;">Шаблон с одной переменной отображается с<br/>переменная замененной на ее значение.</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p style="font-size:12pt;">Реализовать движок шаблонизатора, который предоставляет <br/>API и использует синтаксический анализатор шаблонов внутри.</p>
-          </td>
-          <td>
-            <p style="font-size:12pt;">Шаблон с несколькими переменными отображается с<br/>соответствующими замененными значениями переменных.</p>
-          </td>
-        </tr>
-      </table>
-      <h2 id="avtomatizirovann_e_kriterii_priemki">
-        <a class="anchor" href="#avtomatizirovann_e_kriterii_priemki">Автоматизированные критерии приемки</a>
+      <p>This is real problem, becouse software needs to change.</p>
+      <h3 id="Failing_to_meet_actual_need">
+        <a class="anchor" href="#Failing_to_meet_actual_need">Failing to meet actual needs</a>
+      </h3>
+      <p>From book "Test Driven" by Lasse Koskela:</p>
+      <blockquote>
+        <cite>Nobody likes buying a pig in a poke. Yet the customers of software development groups have been constantly forced to do just that. In exchange for a specification, the software developers have set off to build what the specification describes—only to find out 12 months later that the specification didn’t quite match what the customer intended back then. Not to mention that, especially in the modern day’s hectic world of business, the customer’s current needs are significantly different from what they were last year.</cite>
+      </blockquote>
+      <ol>
+        <li>
+          <p>Software developed late, do not match customer needs</p>
+        </li>
+        <li>
+          <p>Customer needs change significantly</p>
+        </li>
+      </ol>
+      <h2 id="Solution">
+        <a class="anchor" href="#Solution">Solution</a>
       </h2>
-      <p>Для реализации автоматизированных критерии приемки, например финансовых расчетов, как правило пишутся «движки», загружающие контрольные данные из табличных файлов. Возможна так же независимая реализация расчета контрольных значений на одном из языков программирования, например Python.</p>
+      <p>To create maintainable, working software that meets the customer’s actual, present needs, we need learn </p>
+      <ol>
+        <li>
+          <p>How to build things right</p>
+        </li>
+        <li>
+          <p>How to build right things</p>
+        </li>
+      </ol>
+      <p>To ensure external and internal software quality, on lower level we should use technique called "TDD", on higher level "acceptance TDD".</p>
+      <h3 id="TDD">
+        <a class="anchor" href="#TDD">TDD</a>
+      </h3>
+      <blockquote>
+        <cite>TDD is a way of programming that encourages good design and is a disciplined process that helps us avoid programming errors. TDD does so by making us write small, automated tests, which eventually build up a very effective alarm system for protecting our code from regression. You cannot add quality into software after the fact, and the short development cycle that TDD promotes is well geared toward writing high-quality code from the start.</cite>
+      </blockquote>
+      <p>To avoid programming errors, we should write high quality code from start. We should make small, autonomous components and accurately test them.</p>
+      <h3 id="TEST_FIRST">
+        <a class="anchor" href="#TEST_FIRST">TEST FIRST</a>
+      </h3>
+      <blockquote>
+        <cite>The short cycle is different from the way we’re used to programming. We’ve always designed first, then implemented the design, and then tested the implementation somehow—usually not too thoroughly. (After all, we’re good progra</cite>
+        <cite>m</cite>
+        <cite>mers and don’t make mistakes, right?) TDD turns this thinking around and says we should write the test first and only then write code to reach that clear goal. Design is what we do last. We look at the code we have and find the simplest design possible.</cite>
+      </blockquote>
+      <p>We should break old software develoment cycle: design → implementation → test (not thoroughly, not automated way). </p>
+      <p>Write test first, Then apply design. And at time the requirements change — change test first. Then simplest design possible.</p>
+      <h3 id="Refactoring">
+        <a class="anchor" href="#Refactoring">Refactoring</a>
+      </h3>
+      <blockquote>
+        <cite>The last step in the cycle is called refactoring. Refactoring is a disciplined way of transforming code from one state or structure to another, removing duplication, and gradually moving the code toward the best design we can imagine. By constantly refactoring, we can grow our code base and evolve our design incrementally.</cite>
+      </blockquote>
     </div>
-    <script type="text/javascript" src="/privilegedAPI/web/scripts/privilegedAPI.js"></script>
-    <script type="text/javascript" src="/oooxhtml/oooxhtml.js"></script>
   </body>
 </html>
