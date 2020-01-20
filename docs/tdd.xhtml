@@ -11,24 +11,23 @@
   <body>
     <div class="container text">
       <h1 id="Test_driven_design">
-        <a class="anchor" href="#Test_driven_design">Test driven design</a>
+        <a class="anchor" href="#Test_driven_design">Test driven <span style="font-size:18.2000007629395pt;font-weight:bold;">development</span></a>
       </h1>
       <h2 id="Definition">
         <a class="anchor" href="#Definition">Definition</a>
       </h2>
-      <p>TDD it is a programming technique that helps us write thoroughly tested code and evolve our code with the best design possible at each stage. TDD simply helps us avoid the vicious circle of poorly written code. </p>
-      <p>The big picture from book "Test Driven" by Lasse Koskela:</p>
+      <p>TDD it is a programming technique that helps us write thoroughly tested code and evolve our code with the best design possible at each stage.</p>
+      <p>The big picture from book "Test Driven" by Lasse Koskela (this and all next citates made from this book):</p>
       <blockquote>
         <cite>“Only ever write code to fix a failing test.” That’s test-driven development, or TDD, in one sentence. First we write a test, then we write code to make the test pass. Then we find the best possible design for what we have, relying on the existing tests to keep us from breaking things while we’re at it. This approach to building software encourages good design, produces testable code, and keeps us away from over-engineering our systems because of flawed assumptions. And all of this is accomplished by the simple act of driving our design each step of the way with executable tests that move us toward the final implementation.</cite>
       </blockquote>
-      <p>Using TDD, we encouraging good software desing. "Good" means "enough good at current moment", not over-engineered design to pass tests / acceptance criterias.</p>
+      <p>Using TDD, we encouraging good software design. "Good" means "enough good at current moment", not over-engineered design to pass tests / acceptance criterias.</p>
       <h2 id="Problems">
         <a class="anchor" href="#Problems">Problems</a>
       </h2>
       <h3 id="Nightmare_to_maintain__slow_to_develop">
         <a class="anchor" href="#Nightmare_to_maintain__slow_to_develop">Nightmare to maintain, slow to develop </a>
       </h3>
-      <p>From book "Test Driven" by Lasse Koskela:</p>
       <blockquote>
         <cite>Well-written code exhibits good design and a balanced division of responsibilities without duplication—all the good stuff. Poorly written code doesn’t, and working with it is a nightmare in many aspects. One of them is that the code is difficult to understand and, thus, difficult to change. As if that wasn’t enough of a speed bump, changing problematic code tends to break functionality elsewhere in the system, and duplication wreaks havoc in the form of bugs that were supposed to be fixed already. The list goes on.</cite>
       </blockquote>
@@ -48,7 +47,6 @@
       <h3 id="Failing_to_meet_actual_need">
         <a class="anchor" href="#Failing_to_meet_actual_need">Failing to meet actual needs</a>
       </h3>
-      <p>From book "Test Driven" by Lasse Koskela:</p>
       <blockquote>
         <cite>Nobody likes buying a pig in a poke. Yet the customers of software development groups have been constantly forced to do just that. In exchange for a specification, the software developers have set off to build what the specification describes—only to find out 12 months later that the specification didn’t quite match what the customer intended back then. Not to mention that, especially in the modern day’s hectic world of business, the customer’s current needs are significantly different from what they were last year.</cite>
       </blockquote>
@@ -73,29 +71,42 @@
         </li>
       </ol>
       <p>To ensure external and internal software quality, on lower level we should use technique called "TDD", on higher level "acceptance TDD".</p>
-      <h3 id="TDD">
-        <a class="anchor" href="#TDD">TDD</a>
+      <h3 id="Build_thing_right:_TDD">
+        <a class="anchor" href="#Build_thing_right:_TDD">Build thing right: TDD</a>
       </h3>
+      <h4 id="TDD">
+        <a class="anchor" href="#TDD">TDD</a>
+      </h4>
       <blockquote>
         <cite>TDD is a way of programming that encourages good design and is a disciplined process that helps us avoid programming errors. TDD does so by making us write small, automated tests, which eventually build up a very effective alarm system for protecting our code from regression. You cannot add quality into software after the fact, and the short development cycle that TDD promotes is well geared toward writing high-quality code from the start.</cite>
       </blockquote>
       <p>To avoid programming errors, we should write high quality code from start. We should make small, autonomous components and accurately test them.</p>
-      <h3 id="TEST_FIRST">
+      <h4 id="TEST_FIRST">
         <a class="anchor" href="#TEST_FIRST">TEST FIRST</a>
-      </h3>
+      </h4>
       <blockquote>
-        <cite>The short cycle is different from the way we’re used to programming. We’ve always designed first, then implemented the design, and then tested the implementation somehow—usually not too thoroughly. (After all, we’re good progra</cite>
-        <cite>m</cite>
-        <cite>mers and don’t make mistakes, right?) TDD turns this thinking around and says we should write the test first and only then write code to reach that clear goal. Design is what we do last. We look at the code we have and find the simplest design possible.</cite>
+        <cite>The short cycle is different from the way we’re used to programming. We’ve always designed first, then implemented the design, and then tested the implementation somehow—usually not too thoroughly. (After all, we’re good programmers and don’t make mistakes, right?) TDD turns this thinking around and says we should write the test first and only then write code to reach that clear goal. Design is what we do last. We look at the code we have and find the simplest design possible.</cite>
       </blockquote>
       <p>We should break old software develoment cycle: design → implementation → test (not thoroughly, not automated way). </p>
-      <p>Write test first, Then apply design. And at time the requirements change — change test first. Then simplest design possible.</p>
-      <h3 id="Refactoring">
-        <a class="anchor" href="#Refactoring">Refactoring</a>
-      </h3>
+      <p>Write test first, Then apply design. And at time the requirements change — change test first. Then apply simplest design possible.</p>
       <blockquote>
         <cite>The last step in the cycle is called refactoring. Refactoring is a disciplined way of transforming code from one state or structure to another, removing duplication, and gradually moving the code toward the best design we can imagine. By constantly refactoring, we can grow our code base and evolve our design incrementally.</cite>
       </blockquote>
+      <h3 id="Build_right_t">
+        <a class="anchor" href="#Build_right_t">Build right thing: acceptance TDD</a>
+      </h3>
+      <blockquote>
+        <cite>In essence, this means that tests are no longer merely a verification tool, but also an integral part of requirements and specification as well as a medium for customer collaboration. In this section, we’ll go into more detail about these new roles for tests, starting with examining their part in nurturing close collaboration between developers, testers, and customers, and then discussing the use of tests as the shared language facilitating this collaboration.</cite>
+      </blockquote>
+      <blockquote>
+        <cite>Acceptance TDD as a technique is not coupled to any specific format for expressing requirements. The same ideas can be applied much to the same effect whether you’re implementing use cases, user stories, or some other equivalent medium for documenting what needs to be done. It’s worth noting, though, that teams using user stories to </cite>
+        <cite>manage their requirements tend to talk about story test-driven development instead—which is a different name for the same technique.</cite>
+      </blockquote>
+      <p>Test-driven software development cycle starts from use cases (use stories, job stories, etc). When use cases documented using acceptance criterias, they become new shared language between developers, custromers, testers, business analysts.</p>
+      <h4 id="Close_collaboration">
+        <a class="anchor" href="#Close_collaboration">Close collaboration</a>
+      </h4>
+      <p>With acceptance TDD, we are able to collaborate effectively by bringing together the knowledge, skills, and abilities required for doing a good job.</p>
     </div>
   </body>
 </html>
